@@ -13,6 +13,6 @@ Issues and missing methods:
 - Only works with Mupen64Plus_Next core for now. Mupen64Plus and ParaLLel to be added
 
 Working Features:
-- Enter path for roms in user_config and file name, game title and game id in games.py for adding games into the Galaxy 2.0 library
+- Enter path for roms in user_config.py and file name, game title and game id in games.py for adding games into the Galaxy 2.0 library
 - Enter path for emulator and launch roms directly from Galaxy 2.0
 - Import play times from RetroArch by enabling "Save runtime log (aggregate)" in RetroArch settings under "Saving"
