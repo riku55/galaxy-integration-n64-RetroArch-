@@ -97,3 +97,4 @@ class RetroarchN64Plugin(Plugin):
 
 def main():
     create_and_run_plugin(RetroarchN64Plugin, sys.argv)
+    
