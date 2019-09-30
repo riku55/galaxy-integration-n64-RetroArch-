@@ -5,7 +5,7 @@
     "version": "0.1",
     "description": "Galaxy Plugin to add n64 roms and start them with RetroArch emulator",
     "author": "riku55",
-    "email": "riku55@gmx.de",
+    "email": "",
     "url": "https://github.com/Riku55",
     "script": "plugin.py"
 }
