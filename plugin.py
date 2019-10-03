@@ -11,7 +11,7 @@ from galaxy.api.types import Authentication, Game, LicenseInfo, LocalGame, GameT
 class RetroarchN64Plugin(Plugin):
 
     def __init__(self, reader, writer, token):
-        super().__init__(Platform.Nintendo64, "0.1", reader, writer, token)
+        super().__init__(Platform.Nintendo64, "0.2", reader, writer, token)
         self.game_list = []
         self.playlist_path = user_config.emu_path + "playlists/Nintendo - Nintendo 64.lpl"
 
