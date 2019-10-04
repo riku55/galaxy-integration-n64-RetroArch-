@@ -25,4 +25,5 @@ Setting up the integration - Tutorial:
 7) Go to "Import content" and click on "Scan Directory".
 8) Scan the directory where you roms are stored in (the same you entered in user_config.py).
 9) Install Mupen64Plus_Next core (Main Menu -> Load Core -> Download a Core -> Nintendo - Nintendo 64 (Mupen64Plus-Next)).
-10) Connect the integration.
+10) Go to Settings -> Saving, and enable "Save runtime log (aggregate)".
+11) Connect the integration.
