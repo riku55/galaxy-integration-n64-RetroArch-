@@ -32,7 +32,7 @@ class RetroarchN64Plugin(Plugin):
             with open(self.playlist_path) as playlist_json:
                 playlist_dict = json.load(playlist_json)
             for entry in playlist_dict["items"]:
-                if os.path.abspath(user_config.rom_path) in os.path.abspath(entry["path"]):
+                if os.path.abspath(user_config.rom_path) in os.path.abspath(entry["path"]) and os.path.isfile(entry["path"]):
                     if entry["label"].split(" (")[0] in corrections.correction_list:
                         correct_name = corrections.correction_list[entry["label"].split(" (")[0]]
                     else:
