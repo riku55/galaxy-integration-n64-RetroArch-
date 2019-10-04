@@ -15,9 +15,9 @@ class RetroarchN64Plugin(Plugin):
         self.game_list = []
         self.playlist_path = user_config.emu_path + "playlists/Nintendo - Nintendo 64.lpl"
 
-    #Just need any authentication data, so I used emu_path and Retroarch
+   
     async def authenticate(self, stored_credentials=None):
-        return Authentication(user_config.emu_path, "Retroarch")
+        return Authentication("RAUser", "Retroarch")
     
     
     async def get_owned_games(self):
@@ -102,4 +102,7 @@ class RetroarchN64Plugin(Plugin):
 
 def main():
     create_and_run_plugin(RetroarchN64Plugin, sys.argv)
+    
+if __name__ == "__main__":
+    main()      
     
