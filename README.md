@@ -6,7 +6,7 @@ This integration is still work in progress, so better not to be used for now.
 Issues and missing methods:
 - Local Game status update not yet implemented
 - tick() for updates while running not yet implemented
-- Removal of games not yet implemented (they even stay when disconnecting the integration)
+- Removal of games not yet implemented (though they are now removed if disconnecting the integration)
 - Integration disconnects after each restart of Galaxy 2.0
 - Only works with Mupen64Plus_Next core for now. Mupen64Plus and ParaLLel to be added
 
