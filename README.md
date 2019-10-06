@@ -4,10 +4,7 @@ N64 RetroArch integration for GOG Galaxy 2.0
 This integration is still work in progress, but it's core features are working and the worst bugs are removed, so try it out if you'd like to.
 
 Issues and missing methods:
-- Local Game status update not yet implemented
-- tick() for updates while running not yet implemented
-- Removal of games not yet implemented (though they are now removed if disconnecting the integration)
-- Integration disconnects after each restart of Galaxy 2.0
+- While the integration is running, change of games (removing or adding roms) will only show up when restarting Galaxy or reconnecting the integration
 - Only works with Mupen64Plus_Next core for now. Mupen64Plus and ParaLLel to be added
 
 Working Features:
