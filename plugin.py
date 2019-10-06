@@ -112,6 +112,7 @@ class RetroarchN64Plugin(Plugin):
             if self.proc.poll() is not None:
                 self.update_local_game_status(LocalGame(self.game_run, 1))
                 self.update_game_time(self.get_game_time(self.game_run,None))
+                self.proc = None
         except AttributeError:
             pass
         
