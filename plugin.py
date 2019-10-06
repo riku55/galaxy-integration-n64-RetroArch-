@@ -17,8 +17,16 @@ class RetroarchN64Plugin(Plugin):
 
    
     async def authenticate(self, stored_credentials=None):
+        creds = {}
+        creds["user"] = "RAUser"
+        self.store_credentials(creds)
         return Authentication("RAUser", "Retroarch")
     
+    async def pass_login_credentials(self, step, credentials, cookies):
+        creds = {}
+        creds["user"] = "RAUser"
+        self.store_credentials(creds)
+        return Authentication("RAUser", "Retroarch")    
     
     async def get_owned_games(self):
         self.update_game_list()   
@@ -98,6 +106,14 @@ class RetroarchN64Plugin(Plugin):
                         min_data = datetime.datetime.strptime(time_data["runtime"], '%H:%M:%S')
                         time = min_data.hour*60 + min_data.minute
         return GameTime(game_id, time, last_played)
+    
+    def tick(self):
+        try:
+            if self.proc.poll() is not None:
+                self.update_local_game_status(LocalGame(self.game_run, 1))
+                self.update_game_time(self.get_game_time(self.game_run,None))
+        except AttributeError:
+            pass
         
 
 def main():
