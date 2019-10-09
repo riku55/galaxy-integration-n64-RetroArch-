@@ -22,7 +22,7 @@ ________________________________________________________________________________
 
 Issues and missing methods:
 - While the integration is running, change of games (removing or adding roms) will only show up when restarting Galaxy or reconnecting the integration
-- Only works with Mupen64Plus_Next core for now. Mupen64Plus and ParaLLel to be added
+- Only works with Mupen64Plus_Next core for now. Support for other cores added eventually or by demand.
 
 Working Features:
 - Enter path for roms in user_config.py and scan the same folder in Retroarch to add them into Galaxy 2.0
