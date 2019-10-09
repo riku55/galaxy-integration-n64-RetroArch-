@@ -15,7 +15,7 @@ Thanks to AHCoder for using his PS2 integration as base for this one. Also thank
 
 ## Tutorial
 
-### Setting up [RetroArch](https://retroarch.com/?page=platforms) - You need to repeat step 3 if you want to add new Roms.
+### Setting up [RetroArch](https://retroarch.com/?page=platforms) - You need to repeat step 3 after adding new Roms to the path.
 1. Open RetroArch.
 2. Navigate to the left until you're at *Main Menu*, click on *Load Core* -> *Download a Core* and select *Nintendo - Nintendo 64 (Mupen64Plus-Next)*.
 3. Navigate to the right until you're at *Import Content*, click on *Scan Directory*, navigate to the folder where your Roms are and click on *Scan this Directory*.
