@@ -2,7 +2,7 @@
 N64 RetroArch integration for GOG Galaxy 2.0
 
 This integration is still work in progress, but it's core features are working and the worst bugs are removed, so try it out if you'd like to.
-Thanks to AHCoder for using his PS2 integrations as base for this one. Also thanks to several people on the GOG Discord for helping me out with some problems.
+Thanks to AHCoder for using his PS2 integration as base for this one. Also thanks to several people on the GOG Discord for helping me out with some problems.
 
 #### Working Features:
 - Enter path for roms in user_config.py and scan the same folder in Retroarch to add them into Galaxy 2.0
