@@ -4,6 +4,15 @@ N64 RetroArch integration for GOG Galaxy 2.0
 This integration is still work in progress, but it's core features are working and the worst bugs are removed, so try it out if you'd like to.
 Thanks to AHCoder for using his PS2 integrations as base for this one. Also thanks to several people on the GOG Discord for helping me out with some problems.
 
+#### Working Features:
+- Enter path for roms in user_config.py and scan the same folder in Retroarch to add them into Galaxy 2.0
+- Enter path for emulator and launch roms directly from Galaxy 2.0
+- Import play times from RetroArch by enabling "Save runtime log (aggregate)" in RetroArch settings under "Saving"
+
+#### Issues:
+- While the integration is running, change of games (removing or adding roms) will only show up when restarting Galaxy or reconnecting the integration
+- Only works with Mupen64Plus_Next core for now. Support for other cores added eventually or by demand.
+
 ## Tutorial
 
 ### Setting up [RetroArch](https://retroarch.com/?page=platforms) - You need to repeat step 3 if you want to add new Roms.
@@ -21,11 +30,4 @@ Thanks to AHCoder for using his PS2 integrations as base for this one. Also than
 6. (Re)start Galaxy 2.0 and connect the integration.
 _______________________________________________________________________________________________________________________________________
 
-Issues and missing methods:
-- While the integration is running, change of games (removing or adding roms) will only show up when restarting Galaxy or reconnecting the integration
-- Only works with Mupen64Plus_Next core for now. Support for other cores added eventually or by demand.
 
-Working Features:
-- Enter path for roms in user_config.py and scan the same folder in Retroarch to add them into Galaxy 2.0
-- Enter path for emulator and launch roms directly from Galaxy 2.0
-- Import play times from RetroArch by enabling "Save runtime log (aggregate)" in RetroArch settings under "Saving"
