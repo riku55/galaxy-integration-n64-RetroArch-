@@ -10,9 +10,7 @@ Thanks to AHCoder for using his PS2 integration as base for this one. Also thank
 - Enter path for roms in user_config.py and scan the same folder in Retroarch to add them into Galaxy 2.0
 - Enter path for emulator and launch roms directly from Galaxy 2.0
 - Import play times from RetroArch by enabling "Save runtime log (aggregate)" in RetroArch settings under "Saving"
-
-#### Issues:
-- Only works with Mupen64Plus_Next core for now. Support for other cores added eventually or by demand.
+- Use Mupen64Plus_Next or ParaLLEl core, change it in user_config.py
 
 ## Tutorial
 
