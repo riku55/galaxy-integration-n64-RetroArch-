@@ -12,7 +12,6 @@ Thanks to AHCoder for using his PS2 integration as base for this one. Also thank
 - Import play times from RetroArch by enabling "Save runtime log (aggregate)" in RetroArch settings under "Saving"
 
 #### Issues:
-- While the integration is running, change of games (removing or adding roms) will only show up when restarting Galaxy or reconnecting the integration
 - Only works with Mupen64Plus_Next core for now. Support for other cores added eventually or by demand.
 
 ## Tutorial
