@@ -12,7 +12,7 @@ class RetroarchN64Plugin(Plugin):
 
     def __init__(self, reader, writer, token):
         super().__init__(Platform.Nintendo64, "0.2", reader, writer, token)
-        self.game_list = []
+        self.game_cache = []
         self.playlist_path = user_config.emu_path + "playlists/Nintendo - Nintendo 64.lpl"
 
    
@@ -29,12 +29,13 @@ class RetroarchN64Plugin(Plugin):
         return Authentication("RAUser", "Retroarch")    
     
     async def get_owned_games(self):
-        self.update_game_list()   
+        self.update_game_cache()   
         
-        return self.game_list    
+        return self.game_cache    
     
-    #Scans retroarch playlist for roms in rom_path and adds them to self.game_list
-    def update_game_list(self):   
+    #Scans retroarch playlist for roms in rom_path and adds them to self.game_cache
+    def update_game_cache(self):   
+        game_list = []
     
         if os.path.isfile(self.playlist_path):
             with open(self.playlist_path) as playlist_json:
@@ -45,7 +46,7 @@ class RetroarchN64Plugin(Plugin):
                         correct_name = corrections.correction_list[entry["label"].split(" (")[0]]
                     else:
                         correct_name = entry["label"].split(" (")[0]
-                    self.game_list.append(
+                    game_list.append(
                         Game(                          
                             entry["crc32"].split("|")[0],
                             correct_name,
@@ -53,14 +54,23 @@ class RetroarchN64Plugin(Plugin):
                             LicenseInfo(LicenseType.SinglePurchase, None)
                             )
                         )    
+        for entry in game_list:
+            if entry not in self.game_cache:
+                self.game_cache.append(entry)
+                self.add_game(entry)
+        
+        for entry in self.game_cache:
+            if entry not in game_list:
+                self.game_cache.remove(entry)    
+                self.remove_game(entry.game_id)            
 
                     
-    #runs update_game_list in case it is started before get_owned_games. If it runs after it, it just returns self.game_list with each game as installed
+    #runs update_game_cache in case it is started before get_owned_games. If it runs after it, it just returns self.game_cache with each game as installed
     async def get_local_games(self):
-        if not self.game_list:
-            self.update_game_list()
+        if not self.game_cache:
+            self.update_game_cache()
         local_game_list = []
-        for game_entry in self.game_list:
+        for game_entry in self.game_cache:
             local_game_list.append(LocalGame(game_entry.game_id, 1))
         return local_game_list
           
@@ -115,6 +125,8 @@ class RetroarchN64Plugin(Plugin):
                 self.proc = None
         except AttributeError:
             pass
+        self.update_game_cache()    
+        self.get_local_games()
         
 
 def main():
