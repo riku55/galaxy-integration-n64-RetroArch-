@@ -14,6 +14,8 @@ class RetroarchN64Plugin(Plugin):
         super().__init__(Platform.Nintendo64, "0.2", reader, writer, token)
         self.game_cache = []
         self.playlist_path = user_config.emu_path + "playlists/Nintendo - Nintendo 64.lpl"
+        self.proc = None
+        self.game_run = ""
 
    
     async def authenticate(self, stored_credentials=None):
@@ -31,7 +33,7 @@ class RetroarchN64Plugin(Plugin):
     async def get_owned_games(self):
         self.update_game_cache()   
         
-        return self.game_cache    
+        return self.game_cache  
     
     #Scans retroarch playlist for roms in rom_path and adds them to self.game_cache
     def update_game_cache(self):   
@@ -54,6 +56,7 @@ class RetroarchN64Plugin(Plugin):
                             LicenseInfo(LicenseType.SinglePurchase, None)
                             )
                         )    
+                        
         for entry in game_list:
             if entry not in self.game_cache:
                 self.game_cache.append(entry)
@@ -62,7 +65,7 @@ class RetroarchN64Plugin(Plugin):
         for entry in self.game_cache:
             if entry not in game_list:
                 self.game_cache.remove(entry)    
-                self.remove_game(entry.game_id)            
+                self.remove_game(entry.game_id)
 
                     
     #runs update_game_cache in case it is started before get_owned_games. If it runs after it, it just returns self.game_cache with each game as installed
@@ -93,7 +96,12 @@ class RetroarchN64Plugin(Plugin):
                 playlist_dict = json.load(playlist_json)
         for entry in playlist_dict["items"]:
             if game_id == entry["crc32"].split("|")[0]:
-                subprocess.Popen(os.path.abspath(user_config.emu_path + "retroarch.exe" + " -L \"" + user_config.emu_path + "cores/mupen64plus_next_libretro.dll\" \"" + entry["path"]))
+                self.update_local_game_status(LocalGame(game_id, 2))
+                self.game_run = entry["crc32"].split("|")[0]
+                if user_config.core == 1:
+                    self.proc = subprocess.Popen(os.path.abspath(user_config.emu_path + "retroarch.exe" + " -L \"" + user_config.emu_path + "cores/mupen64plus_next_libretro.dll\" \"" + entry["path"]))
+                if user_config.core == 2:
+                    self.proc = subprocess.Popen(os.path.abspath(user_config.emu_path + "retroarch.exe" + " -L \"" + user_config.emu_path + "cores/parallel_n64_libretro.dll\" \"" + entry["path"]))
                 break          
     
     #imports retroarch playtime if existent. For this to work, activate "Save runtime log (aggregate)" in RetroArch settings -> Savings
@@ -125,6 +133,7 @@ class RetroarchN64Plugin(Plugin):
                 self.proc = None
         except AttributeError:
             pass
+            
         self.update_game_cache()    
         self.get_local_games()
         
