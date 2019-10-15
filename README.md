@@ -30,4 +30,6 @@ Thanks to AHCoder for using his PS2 integration as base for this one. Also thank
 6. (Re)start Galaxy 2.0 and connect the integration.
 _______________________________________________________________________________________________________________________________________
 
-
+## If the integration doesn't work and you made sure that you set up everything correctly, here are some things that might fix it:
+1. In RetroArch, go to Settings -> Playlist and make sure that *Save Playlist using old format* is NOT active.
+2. More to be added
