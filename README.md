@@ -14,12 +14,11 @@ Thanks to AHCoder for using his PS2 integration as base for this one. Also thank
 
 ## Tutorial
 
-### Setting up [RetroArch](https://retroarch.com/?page=platforms) - You need to repeat step 3 after adding new Roms to the path.
-1. Be sure to use RetroArch version 1.7.6 or higher. The integration won't work with an older version.
-2. Open RetroArch.
-3. Navigate to the left until you're at *Main Menu*, click on *Load Core* -> *Download a Core* and select *Nintendo - Nintendo 64 (Mupen64Plus-Next)*.
-4. Navigate to the right until you're at *Import Content*, click on *Scan Directory*, navigate to the folder where your Roms are and click on *Scan this Directory*.
-5. Navigate to *Settings*, click on *Saving*, go to the last option there *Save runtime log (aggregate)* and turn it on.
+### Setting up [RetroArch](https://retroarch.com/?page=platforms) (version 1.7.6 or higher required) - You need to repeat step 3 after adding new Roms to the path.
+1. Open RetroArch.
+2. Navigate to the left until you're at *Main Menu*, click on *Load Core* -> *Download a Core* and select *Nintendo - Nintendo 64 (Mupen64Plus-Next)*.
+3. Navigate to the right until you're at *Import Content*, click on *Scan Directory*, navigate to the folder where your Roms are and click on *Scan this Directory*.
+4. Navigate to *Settings*, click on *Saving*, go to the last option there *Save runtime log (aggregate)* and turn it on.
 
 ### Setting up the Integration:
 1. Download the integration (use clone or download or download the *Source Code.zip* file in releases or just [click here](https://github.com/Riku55/galaxy-integration-n64-RetroArch-/archive/0.2.zip)).
