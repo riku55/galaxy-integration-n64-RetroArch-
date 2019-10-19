@@ -15,11 +15,12 @@ Created with the Galaxy API: https://github.com/gogcom/galaxy-integrations-pytho
 - Use Mupen64Plus_Next or ParaLLEl core, change it in user_config.py
 
 #### Future Features:
+- MacOS Support (help from MacOS Users would be appreciated)
 - Add GUI (cef) for better usability
 - Add retroachievements via API
 - More launch options
 - Support for various emulators (might be another repository then)
-- Add more platforms supported by RetroArch (if Galaxy should support more than one platform per integration in the future. Currently working on PSX support in other repository)
+- Add more platforms supported by RetroArch (if Galaxy should support more than one platform per integration in the future. Currently working on PSX support in other repository, not quite usable right now though)
 
 
 ## Tutorial
