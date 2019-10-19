@@ -87,7 +87,6 @@ class RetroarchN64Plugin(Plugin):
     def shutdown(self):
         pass
                       
-    #only works with mupen64_plus_next core for now, mupen64_plus and ParaLLEl to be added
     #potentially give user more customization possibilities like starting in fullscreen etc 
     async def launch_game(self, game_id): 
         
