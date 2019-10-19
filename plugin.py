@@ -17,7 +17,7 @@ class RetroarchN64Plugin(Plugin):
         self.proc = None
         self.game_run = ""
 
-   
+   #placeholders will be replaced with retroachievements credentials once those are implemented
     async def authenticate(self, stored_credentials=None):
         creds = {}
         creds["user"] = "RAUser"
@@ -36,6 +36,7 @@ class RetroarchN64Plugin(Plugin):
         return self.game_cache  
     
     #Scans retroarch playlist for roms in rom_path and adds them to self.game_cache
+    #as roms don't need to be installed, owned games and local games are the same and both run update_game_cache
     def update_game_cache(self):   
         game_list = []
     
@@ -56,12 +57,14 @@ class RetroarchN64Plugin(Plugin):
                             LicenseInfo(LicenseType.SinglePurchase, None)
                             )
                         )    
-                        
+        
+        #adds games when added while running
         for entry in game_list:
             if entry not in self.game_cache:
                 self.game_cache.append(entry)
                 self.add_game(entry)
         
+        #removes games when removed while running
         for entry in self.game_cache:
             if entry not in game_list:
                 self.game_cache.remove(entry)    
@@ -124,6 +127,7 @@ class RetroarchN64Plugin(Plugin):
                         time = min_data.hour*60 + min_data.minute
         return GameTime(game_id, time, last_played)
     
+   #checks if game is (still) running, adjusts game_cache and game_time
     def tick(self):
         try:
             if self.proc.poll() is not None:
