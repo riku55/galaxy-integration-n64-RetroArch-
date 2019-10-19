@@ -14,6 +14,14 @@ Created with the Galaxy API: https://github.com/gogcom/galaxy-integrations-pytho
 - Import play times from RetroArch by enabling "Save runtime log (aggregate)" in RetroArch settings under "Saving"
 - Use Mupen64Plus_Next or ParaLLEl core, change it in user_config.py
 
+#### Future Features:
+- Add GUI (cef) for better usability
+- Add retroachievements via API
+- More launch options
+- Support for various emulators (might be another repository then)
+- Add more platforms supported by RetroArch (if Galaxy should support more than one platform per integration in the future. Currently working on PSX support in other repository)
+
+
 ## Tutorial
 
 ### Setting up [RetroArch](https://retroarch.com/?page=platforms) (version 1.7.6 or higher required) - You need to repeat step 3 after adding new Roms to the path.
