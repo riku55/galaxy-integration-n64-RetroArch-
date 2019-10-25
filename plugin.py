@@ -48,7 +48,10 @@ class RetroarchN64Plugin(Plugin):
                     if entry["label"].split(" (")[0] in corrections.correction_list:
                         correct_name = corrections.correction_list[entry["label"].split(" (")[0]]
                     else:
-                        correct_name = entry["label"].split(" (")[0]
+                        if entry["label"] in corrections.correction_list2:
+                            correct_name = corrections.correction_list2[entry["label"]]
+                        else:
+                            correct_name = entry["label"].split(" (")[0]
                     game_list.append(
                         Game(                          
                             entry["crc32"].split("|")[0],
