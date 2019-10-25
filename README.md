@@ -9,9 +9,9 @@ Thanks to AHCoder for using his PS2 integration as base for this one. Also thank
 Created with the Galaxy API: https://github.com/gogcom/galaxy-integrations-python-api
 
 #### Working Features:
-- Enter path for roms in user_config.py and scan the same folder in Retroarch to add them into Galaxy 2.0
-- Enter path for emulator and launch roms directly from Galaxy 2.0
-- Import play times from RetroArch by enabling "Save runtime log (aggregate)" in RetroArch settings under "Saving"
+- Add N64 Roms into the galaxy 2.0 library
+- Launch N64 Roms with RetroArch via Galaxy 2.0
+- Import RetroArch Playtime
 - Use Mupen64Plus_Next or ParaLLEl core, change it in user_config.py
 
 #### Future Features:
