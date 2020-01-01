@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy NES RetroArch plugin",
+    "platform": "nes",
+    "guid": "e2c630e1-3cbe-4dbd-9235-5e6a2d2955ad",
+    "version": "0.1",
+    "description": "Galaxy Plugin to add NES roms and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}
