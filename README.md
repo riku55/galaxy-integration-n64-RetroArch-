@@ -23,7 +23,7 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 - Super Nintendo Entertainment System
 - Nintendo 64 (Riku55)
 
-![screenshot](https://imgur.com/HxauLPS.png "Screenshot")
+![screenshot](https://imgur.com/A1Zk5Zt.png "Screenshot")
 
 ## Tutorial
 
