@@ -111,7 +111,7 @@ class Retroarch(Plugin):
             with open(self.playlist_path) as playlist_json:
                 playlist_dict = json.load(playlist_json)
             for rom in playlist_dict["items"]:
-                if game_id == entry["label"].split(" (")[0]:
+                if game_id == rom["label"].split(" (")[0]:
                     file_path = user_config.emu_path + "/playlists/logs/" + os.path.abspath(rom["path"]).split(os.path.abspath(user_config.rom_path) + "\\")[1][:-4] + ".lrtl"
                     if os.path.isfile(file_path):
                         with open(file_path) as json_data:
