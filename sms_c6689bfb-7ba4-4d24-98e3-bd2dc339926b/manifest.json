@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy Sega Master System RetroArch plugin",
+    "platform": "sms",
+    "guid": "c6689bfb-7ba4-4d24-98e3-bd2dc339926b",
+    "version": "0.1",
+    "description": "Galaxy Plugin to add Sega Master System roms and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}

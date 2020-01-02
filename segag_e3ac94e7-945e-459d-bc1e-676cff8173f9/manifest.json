@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy Sega Genesis RetroArch plugin",
+    "platform": "segag",
+    "guid": "e3ac94e7-945e-459d-bc1e-676cff8173f9",
+    "version": "0.1",
+    "description": "Galaxy Plugin to add Sega Genesis roms and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}
