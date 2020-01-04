@@ -4,9 +4,13 @@ import sys
 import json, urllib.request, os, os.path
 import user_config, corrections
 import datetime
+import logging
+import time
+from collections import namedtuple
+from typing import Any, Callable, Dict, List, NewType, Optional
 from galaxy.api.consts import LicenseType, LocalGameState, Platform
 from galaxy.api.plugin import Plugin, create_and_run_plugin
-from galaxy.api.types import Authentication, Game, LicenseInfo, LocalGame, GameTime
+from galaxy.api.types import Achievement, Authentication, Game, LicenseInfo, LocalGame, GameTime
 
 from version import __version__ as version
 
@@ -45,13 +49,14 @@ class Retroarch(Plugin):
                 playlist_dict = json.load(playlist_json)
             for entry in playlist_dict["items"]:
                 if os.path.abspath(user_config.rom_path) in os.path.abspath(entry["path"]) and os.path.isfile(entry["path"]):
-                    if entry["label"].split(" (")[0] in corrections.correction_list:
-                        correct_name = corrections.correction_list[entry["label"].split(" (")[0]]
+                    provided_name = entry["label"].split(" (")[0]
+                    if provided_name in corrections.correction_list:
+                        correct_name = corrections.correction_list[provided_name]
                     else:    
-                        correct_name = entry["label"].split(" (")[0]
+                        correct_name = provided_name
                     game_list.append(
                         Game(
-                            entry["crc32"].split("|")[0],
+                            correct_name,
                             correct_name,
                             None,
                             LicenseInfo(LicenseType.SinglePurchase, None)
@@ -95,9 +100,9 @@ class Retroarch(Plugin):
             with open(self.playlist_path) as playlist_json:
                 playlist_dict = json.load(playlist_json)
         for entry in playlist_dict["items"]:
-            if game_id == entry["crc32"].split("|")[0]:
+            if game_id == entry["label"].split(" (")[0]:
                 self.update_local_game_status(LocalGame(game_id, 2))
-                self.game_run = entry["crc32"].split("|")[0]
+                self.game_run = entry["label"].split(" (")[0]
                 self.proc = subprocess.Popen(os.path.abspath(user_config.emu_path + "retroarch.exe" + " -L \"" + user_config.emu_path + "cores/" + user_config.core + "\" \"" + entry["path"]))
                 break
 
@@ -111,7 +116,7 @@ class Retroarch(Plugin):
             with open(self.playlist_path) as playlist_json:
                 playlist_dict = json.load(playlist_json)
             for rom in playlist_dict["items"]:
-                if game_id == rom["crc32"].split("|")[0]:
+                if game_id == rom["label"].split(" (")[0]:
                     file_path = user_config.emu_path + "/playlists/logs/" + os.path.abspath(rom["path"]).split(os.path.abspath(user_config.rom_path) + "\\")[1][:-4] + ".lrtl"
                     if os.path.isfile(file_path):
                         with open(file_path) as json_data:
