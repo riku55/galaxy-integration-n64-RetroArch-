@@ -7,6 +7,7 @@ The goal of this project is to integrate all retro platforms that are supported 
 This project is currently a work in progress.  Bugs may be present.
 
 Created with the Galaxy API: https://github.com/gogcom/galaxy-integrations-python-api
+
 Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-integration-n64-RetroArch-
 
 #### Working Features:
@@ -26,6 +27,7 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 - SEGA Genesis / Mega Drive
 - SEGA CD
 - SEGA Saturn
+- SEGA Dreamcast
 - PlayStation
 - PlayStation Portable
 
