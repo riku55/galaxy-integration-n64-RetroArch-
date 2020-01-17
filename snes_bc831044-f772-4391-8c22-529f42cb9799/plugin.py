@@ -100,9 +100,9 @@ class Retroarch(Plugin):
             with open(self.playlist_path) as playlist_json:
                 playlist_dict = json.load(playlist_json)
         for entry in playlist_dict["items"]:
-            if game_id == ["label"].split(" (")[0]:
+            if game_id == entry["label"].split(" (")[0]:
                 self.update_local_game_status(LocalGame(game_id, 2))
-                self.game_run = ["label"].split(" (")[0]
+                self.game_run = entry["label"].split(" (")[0]
                 self.proc = subprocess.Popen(os.path.abspath(user_config.emu_path + "retroarch.exe" + " -L \"" + user_config.emu_path + "cores/" + user_config.core + "\" \"" + entry["path"]))
                 break
 
