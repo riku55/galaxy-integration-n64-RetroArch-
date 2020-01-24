@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy Atari 2600 RetroArch plugin",
+    "platform": "atari",
+    "guid": "830528d9-e621-48e9-8ed4-e03a4853843e",
+    "version": "0.1",
+    "description": "Galaxy Plugin to add Atari 2600 roms and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}
