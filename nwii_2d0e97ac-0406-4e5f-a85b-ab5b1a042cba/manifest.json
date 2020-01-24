@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy Nintendo Wii RetroArch plugin",
+    "platform": "nwii",
+    "guid": "2d0e97ac-0406-4e5f-a85b-ab5b1a042cba",
+    "version": "0.1",
+    "description": "Galaxy Plugin to add Nintendo Wii isos and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}
