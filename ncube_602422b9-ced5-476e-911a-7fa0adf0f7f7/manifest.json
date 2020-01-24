@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy Nintendo Gamecube RetroArch plugin",
+    "platform": "ncube",
+    "guid": "602422b9-ced5-476e-911a-7fa0adf0f7f7",
+    "version": "0.1",
+    "description": "Galaxy Plugin to add Nintendo Gamecube isos and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}

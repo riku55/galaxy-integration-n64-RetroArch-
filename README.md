@@ -25,6 +25,7 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 - Nintendo Entertainment System
 - Super Nintendo Entertainment System
 - Nintendo 64 (Riku55)
+- Nintendo GameCube
 - SEGA Master System
 - SEGA Genesis / Mega Drive
 - SEGA CD
