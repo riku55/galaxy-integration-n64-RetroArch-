@@ -27,6 +27,9 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 - Nintendo 64 (Riku55)
 - Nintendo GameCube
 - Nintendo Wii
+- Nintendo Game Boy
+- Nintendo Game Boy Color
+- Nintendo Game Boy Advance
 - SEGA Master System
 - SEGA Genesis / Mega Drive
 - SEGA CD
