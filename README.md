@@ -30,6 +30,8 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 - Nintendo Game Boy
 - Nintendo Game Boy Color
 - Nintendo Game Boy Advance
+- Nintendo DS
+- Nintendo 3DS
 - SEGA Master System
 - SEGA Genesis / Mega Drive
 - SEGA CD
