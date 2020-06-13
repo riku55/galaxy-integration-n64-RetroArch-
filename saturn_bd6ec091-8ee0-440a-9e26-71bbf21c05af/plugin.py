@@ -48,11 +48,12 @@ class Retroarch(Plugin):
             with open(self.playlist_path) as playlist_json:
                 playlist_dict = json.load(playlist_json)
             for entry in playlist_dict["items"]:
-                if os.path.abspath(user_config.rom_path) in os.path.abspath(entry["path"]) and os.path.isfile(entry["path"]):
+                rom_path = entry["path"].split("#")[0]
+if os.path.abspath(user_config.rom_path) in os.path.abspath(rom_path) and os.path.isfile(rom_path):
                     provided_name = entry["label"].split(" (")[0]
                     if provided_name in corrections.correction_list:
                         correct_name = corrections.correction_list[provided_name]
-                    else:    
+                    else:
                         correct_name = provided_name
                     game_list.append(
                         Game(
@@ -72,7 +73,7 @@ class Retroarch(Plugin):
         #removes games when removed while running
         for entry in self.game_cache:
             if entry not in game_list:
-                self.game_cache.remove(entry)    
+                self.game_cache.remove(entry)
                 self.remove_game(entry.game_id)
 
     #runs update_game_cache in case it is started before get_owned_games. If it runs after it, it just returns self.game_cache with each game as installed
@@ -94,7 +95,7 @@ class Retroarch(Plugin):
     def shutdown(self):
         pass
 
-    #potentially give user more customization possibilities like starting in fullscreen etc 
+    #potentially give user more customization possibilities like starting in fullscreen etc
     async def launch_game(self, game_id):
         if os.path.isfile(self.playlist_path):
             with open(self.playlist_path) as playlist_json:
@@ -135,7 +136,7 @@ class Retroarch(Plugin):
                 self.proc = None
         except AttributeError:
             pass
-            
+
         self.update_game_cache()
         self.get_local_games()
 
