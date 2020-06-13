@@ -50,7 +50,7 @@ class Retroarch(Plugin):
                 playlist_dict = json.load(playlist_json)
             for entry in playlist_dict["items"]:
                 rom_path = entry["path"].split("#")[0]
-if os.path.abspath(user_config.rom_path) in os.path.abspath(rom_path) and os.path.isfile(rom_path):
+                if os.path.abspath(user_config.rom_path) in os.path.abspath(rom_path) and os.path.isfile(rom_path):
                     provided_name = entry["label"].split(" (")[0]
                     if provided_name in corrections.correction_list:
                         correct_name = corrections.correction_list[provided_name]
