@@ -49,11 +49,12 @@ class Retroarch(Plugin):
             with open(self.playlist_path) as playlist_json:
                 playlist_dict = json.load(playlist_json)
             for entry in playlist_dict["items"]:
-                if os.path.abspath(user_config.rom_path) in os.path.abspath(entry["path"]) and os.path.isfile(entry["path"]):
+                rom_path = entry["path"].split("#")[0]
+                if os.path.abspath(user_config.rom_path) in os.path.abspath(rom_path) and os.path.isfile(rom_path):
                     provided_name = entry["label"].split(" (")[0]
                     if provided_name in corrections.correction_list:
                         correct_name = corrections.correction_list[provided_name]
-                    else:    
+                    else:
                         correct_name = provided_name
                     game_list.append(
                         Game(
@@ -95,7 +96,7 @@ class Retroarch(Plugin):
     def shutdown(self):
         pass
 
-    #potentially give user more customization possibilities like starting in fullscreen etc 
+    #potentially give user more customization possibilities like starting in fullscreen etc
     async def launch_game(self, game_id):
         if os.path.isfile(self.playlist_path):
             with open(self.playlist_path) as playlist_json:
@@ -136,13 +137,13 @@ class Retroarch(Plugin):
                 self.proc = None
         except AttributeError:
             pass
-            
+
         self.update_game_cache()
         self.get_local_games()
-        
+
 
 def main():
     create_and_run_plugin(Retroarch, sys.argv)
-    
+
 if __name__ == "__main__":
     main()
