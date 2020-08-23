@@ -38,6 +38,7 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 - SEGA CD
 - SEGA Saturn
 - SEGA Dreamcast
+- PC Engine / Turobgrafx 16
 - PlayStation
 - PlayStation 2
 - PlayStation Portable
