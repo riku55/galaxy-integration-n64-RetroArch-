@@ -38,6 +38,7 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 - SEGA Saturn
 - SEGA Dreamcast
 - PlayStation
+- PlayStation 2
 - PlayStation Portable
 
 ![screenshot](https://imgur.com/A1Zk5Zt.png "Screenshot")

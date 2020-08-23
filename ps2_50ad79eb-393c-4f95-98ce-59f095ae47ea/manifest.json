@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy PS2 RetroArch plugin",
+    "platform": "ps2",
+    "guid": "50ad79eb-393c-4f95-98ce-59f095ae47ea",
+    "version": "0.1",
+    "description": "Galaxy Plugin to add PS2 isos and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}
