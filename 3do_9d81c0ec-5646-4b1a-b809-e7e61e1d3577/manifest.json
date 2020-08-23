@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy 3DO RetroArch plugin",
+    "platform": "3do",
+    "guid": "9d81c0ec-5646-4b1a-b809-e7e61e1d3577",
+    "version": "0.1",
+    "description": "Galaxy Plugin to add 3DO games and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}

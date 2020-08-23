@@ -20,6 +20,7 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 
 
 ## Currently Supported Platforms
+- 3DO Interactive
 - Atari 2600
 - Atari Jaguar
 - Nintendo Entertainment System
