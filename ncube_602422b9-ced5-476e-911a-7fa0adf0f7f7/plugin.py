@@ -49,7 +49,7 @@ class Retroarch(Plugin):
                 playlist_dict = json.load(playlist_json)
             for entry in playlist_dict["items"]:
                 rom_path = entry["path"].split("#")[0]
-                if os.path.abspath(user_config.rom_path) in os.path.abspath(rom_path) and os.path.isfile(rom_path):
+                if os.path.isfile(rom_path):
                     provided_name = entry["label"].split(" (")[0]
                     game_list.append(
                         Game(
@@ -114,7 +114,7 @@ class Retroarch(Plugin):
                 playlist_dict = json.load(playlist_json)
             for rom in playlist_dict["items"]:
                 if game_id == rom["label"].split(" (")[0]:
-                    file_path = user_config.emu_path + "/playlists/logs/" + os.path.abspath(rom["path"]).split(os.path.abspath(user_config.rom_path) + "\\")[1][:-4] + ".lrtl"
+                    file_path = user_config.emu_path + "/playlists/logs/" + rom["path"].rsplit("\\",1)[1].rsplit("#")[0].rsplit(".",1)[0] + ".lrtl"
                     if os.path.isfile(file_path):
                         with open(file_path) as json_data:
                             time_data = json.load(json_data)

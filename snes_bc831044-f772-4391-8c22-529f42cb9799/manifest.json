@@ -2,7 +2,7 @@
     "name": "GOG Galaxy SNES RetroArch plugin",
     "platform": "snes",
     "guid": "bc831044-f772-4391-8c22-529f42cb9799",
-    "version": "0.1",
+    "version": "0.3",
     "description": "Galaxy Plugin to add SNES roms and start them with the RetroArch emulator",
     "author": "jshackles",
     "email": "jshackles@gmail.com",

@@ -2,7 +2,7 @@
     "name": "GOG Galaxy Nintendo Gameboy RetroArch plugin",
     "platform": "ngameboy",
     "guid": "4345afe1-a2c3-4c58-93d3-373c53a90a92",
-    "version": "0.1",
+    "version": "0.3",
     "description": "Galaxy Plugin to add Nintendo GameBoy roms and start them with the RetroArch emulator",
     "author": "jshackles",
     "email": "jshackles@gmail.com",

@@ -2,7 +2,7 @@
     "name": "GOG Galaxy Sega Saturn RetroArch plugin",
     "platform": "saturn",
     "guid": "bd6ec091-8ee0-440a-9e26-71bbf21c05af",
-    "version": "0.1",
+    "version": "0.3",
     "description": "Galaxy Plugin to add Sega Saturn isos and start them with the RetroArch emulator",
     "author": "jshackles",
     "email": "jshackles@gmail.com",

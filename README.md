@@ -58,5 +58,5 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 2. Extract the ZIP file.
 3. Copy the folders to your Galaxy plugin folder (standard is: *C:\Users\USERNAME\AppData\Local\GOG.com\Galaxy\plugins\installed*)
 4. For each integration, open the file *user_config.py* with an editor.
-5. Add your emulator and roms path, along with your preferred core as described in the file.
+5. Add your emulator path, along with your preferred core as described in the file.
 6. (Re)start Galaxy 2.0 and connect the integration.

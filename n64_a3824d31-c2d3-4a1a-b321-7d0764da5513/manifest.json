@@ -2,7 +2,7 @@
     "name": "Galaxy n64 RetroArch plugin",
     "platform": "n64",
     "guid": "a3824d31-c2d3-4a1a-b321-7d0764da5513",
-    "version": "0.2",
+    "version": "0.3",
     "description": "Galaxy Plugin to add n64 roms and start them with RetroArch emulator",
     "author": "riku55",
     "email": "",

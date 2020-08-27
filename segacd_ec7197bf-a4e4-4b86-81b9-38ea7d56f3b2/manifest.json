@@ -2,7 +2,7 @@
     "name": "GOG Galaxy Sega CD RetroArch plugin",
     "platform": "segacd",
     "guid": "ec7197bf-a4e4-4b86-81b9-38ea7d56f3b2",
-    "version": "0.1",
+    "version": "0.3",
     "description": "Galaxy Plugin to add Sega CD isos and start them with the RetroArch emulator",
     "author": "jshackles",
     "email": "jshackles@gmail.com",

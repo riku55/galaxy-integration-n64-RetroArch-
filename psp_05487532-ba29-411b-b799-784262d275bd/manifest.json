@@ -2,7 +2,7 @@
     "name": "GOG Galaxy PSP RetroArch plugin",
     "platform": "psp",
     "guid": "05487532-ba29-411b-b799-784262d275bd",
-    "version": "0.1",
+    "version": "0.3",
     "description": "Galaxy Plugin to add PSP isos and start them with the RetroArch emulator",
     "author": "jshackles",
     "email": "jshackles@gmail.com",

@@ -2,7 +2,6 @@
 # example:
 # emu_path = "C:/Users/USERNAME/AppData/Roaming/RetroArch/
 
-rom_path = ""
 emu_path = ""
 
 # Enter your core DLL file here, be sure to include the file extension
