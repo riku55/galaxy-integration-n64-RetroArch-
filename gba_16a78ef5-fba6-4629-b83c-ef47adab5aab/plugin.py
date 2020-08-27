@@ -2,7 +2,7 @@ import asyncio
 import subprocess
 import sys
 import json, urllib.request, os, os.path
-import user_config, corrections
+import user_config
 import datetime
 import logging
 import time
@@ -51,14 +51,10 @@ class Retroarch(Plugin):
                 rom_path = entry["path"].split("#")[0]
                 if os.path.abspath(user_config.rom_path) in os.path.abspath(rom_path) and os.path.isfile(rom_path):
                     provided_name = entry["label"].split(" (")[0]
-                    if provided_name in corrections.correction_list:
-                        correct_name = corrections.correction_list[provided_name]
-                    else:
-                        correct_name = provided_name
                     game_list.append(
                         Game(
-                            correct_name,
-                            correct_name,
+                            provided_name,
+                            provided_name,
                             None,
                             LicenseInfo(LicenseType.SinglePurchase, None)
                             )
