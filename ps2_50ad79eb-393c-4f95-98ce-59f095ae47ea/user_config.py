@@ -6,6 +6,6 @@ emu_path = ""
 
 # Enter your core DLL file here, be sure to include the file extension
 # example:
-# core = "pcsx_rearmed_libretro.dll"
+# core = "play_libretro.dll"
 
 core = ""
