@@ -13,9 +13,9 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 #### Working Features:
 - Add and launch retro games to your GOG Galaxy 2.0 library
 - Import RetroArch Playtime
+- Configuration wizard for easy installation
 
 #### Future Features:
-- Add configuration GUI for better usability
 - Add achievements to GOG via web API
 
 
@@ -53,10 +53,15 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 3. Navigate to the right until you're at *Import Content*, click on *Scan Directory*, navigate to the folder where your Roms are and click on *Scan this Directory*.
 4. Navigate to *Settings*, click on *Saving*, go to the last option there *Save runtime log (aggregate)* and turn it on.
 
-#### Setting up the Integration (for now, will be automated in the future):
+#### Setting up RetroGOG:
+1. Download the [RetroGOG configuration wizard](RetroGOG.exe).
+2. Run the application and follow the on-screen instructions.
+3. (Re)start Galaxy 2.0 and connect the integration.
+
+#### Manual setup instructions:
 1. Download the integration (use clone or download).
 2. Extract the ZIP file.
-3. Copy the folders to your Galaxy plugin folder (standard is: *C:\Users\USERNAME\AppData\Local\GOG.com\Galaxy\plugins\installed*)
+3. Copy the contents of the plugins folders to your Galaxy plugin folder (standard is: *C:\Users\USERNAME\AppData\Local\GOG.com\Galaxy\plugins\installed*)
 4. For each integration, open the file *user_config.py* with an editor.
 5. Add your emulator path, along with your preferred core as described in the file.
 6. (Re)start Galaxy 2.0 and connect the integration.
