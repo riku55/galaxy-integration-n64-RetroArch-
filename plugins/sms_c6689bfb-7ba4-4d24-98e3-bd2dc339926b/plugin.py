@@ -39,6 +39,12 @@ class Retroarch(Plugin):
         self.update_game_cache()
         return self.game_cache
 
+    # Format helper for game names
+    def format_game(self, game):
+        game_return = game.rsplit(" (")[0]
+        game_return = game_return.replace("'","")
+        return game_return
+
     #Scans retroarch playlist for roms in rom_path and adds them to self.game_cache
     #as roms don't need to be installed, owned games and local games are the same and both run update_game_cache
     def update_game_cache(self):
@@ -50,7 +56,7 @@ class Retroarch(Plugin):
             for entry in playlist_dict["items"]:
                 rom_path = entry["path"].split("#")[0]
                 if os.path.isfile(rom_path):
-                    provided_name = entry["label"].split(" (")[0]
+                    provided_name = self.format_game(entry["label"])
                     game_list.append(
                         Game(
                             provided_name,
@@ -97,9 +103,9 @@ class Retroarch(Plugin):
             with open(self.playlist_path) as playlist_json:
                 playlist_dict = json.load(playlist_json)
         for entry in playlist_dict["items"]:
-            if game_id == entry["label"].split(" (")[0]:
+            if game_id == self.format_game(entry["label"]):
                 self.update_local_game_status(LocalGame(game_id, 2))
-                self.game_run = entry["label"].split(" (")[0]
+                self.game_run = self.format_game(entry["label"])
                 self.proc = subprocess.Popen(os.path.abspath(user_config.emu_path + "retroarch.exe" + " -L \"" + user_config.emu_path + "cores/" + user_config.core + "\" \"" + entry["path"]))
                 break
 
@@ -113,7 +119,7 @@ class Retroarch(Plugin):
             with open(self.playlist_path) as playlist_json:
                 playlist_dict = json.load(playlist_json)
             for rom in playlist_dict["items"]:
-                if game_id == rom["label"].split(" (")[0]:
+                if game_id == self.format_game(rom["label"]):
                     file_path = user_config.emu_path + "/playlists/logs/" + rom["path"].rsplit("\\",1)[1].rsplit("#")[0].rsplit(".",1)[0] + ".lrtl"
                     if os.path.isfile(file_path):
                         with open(file_path) as json_data:
