@@ -45,7 +45,10 @@ namespace RetroGOG
 			{
 				foreach (string name in strPlaylists)
 				{
-					chbPlaylists.Items.Add(name.Replace(playlistpath, "").Replace(".lpl", ""), true);
+					if (name.Substring(Math.Max(0, name.Length - 4)) == ".lpl")
+					{
+						chbPlaylists.Items.Add(name.Replace(playlistpath, "").Replace(".lpl", ""), true);
+					}
 				}
 			}
 			else
