@@ -2,7 +2,7 @@
     "name": "GOG Galaxy Nintendo DS RetroArch plugin",
     "platform": "nds",
     "guid": "4704ed29-f516-4fd8-8477-ddbcdb7cedfc",
-    "version": "0.3",
+    "version": "0.4",
     "description": "Galaxy Plugin to add Nintendo DS roms and start them with the RetroArch emulator",
     "author": "jshackles",
     "email": "jshackles@gmail.com",

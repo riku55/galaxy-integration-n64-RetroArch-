@@ -2,7 +2,7 @@
     "name": "GOG Galaxy Nintendo 3DS RetroArch plugin",
     "platform": "3ds",
     "guid": "f6acd3ed-2c31-47d6-bae4-07b6714c1e55",
-    "version": "0.3",
+    "version": "0.4",
     "description": "Galaxy Plugin to add Nintendo 3DS roms and start them with the RetroArch emulator",
     "author": "jshackles",
     "email": "jshackles@gmail.com",

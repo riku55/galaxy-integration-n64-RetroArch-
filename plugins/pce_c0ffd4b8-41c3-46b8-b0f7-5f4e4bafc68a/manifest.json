@@ -2,7 +2,7 @@
     "name": "GOG Galaxy PC Engine RetroArch plugin",
     "platform": "pce",
     "guid": "c0ffd4b8-41c3-46b8-b0f7-5f4e4bafc68a",
-    "version": "0.3",
+    "version": "0.4",
     "description": "Galaxy Plugin to add PC Engine games and start them with the RetroArch emulator",
     "author": "jshackles",
     "email": "jshackles@gmail.com",

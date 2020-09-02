@@ -2,7 +2,7 @@
     "name": "GOG Galaxy Sega Dreamcast RetroArch plugin",
     "platform": "dc",
     "guid": "5d181ffd-48dc-4330-aa58-6f646e76a5c8",
-    "version": "0.3",
+    "version": "0.4",
     "description": "Galaxy Plugin to add Sega Dreamcast isos and start them with the RetroArch emulator",
     "author": "jshackles",
     "email": "jshackles@gmail.com",
