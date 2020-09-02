@@ -105,6 +105,8 @@ namespace RetroGOG
 			plugin_codes.Add("Atari - 2600", "atari_830528d9-e621-48e9-8ed4-e03a4853843e");
 			plugin_codes.Add("Sega - Dreamcast", "dc_5d181ffd-48dc-4330-aa58-6f646e76a5c8");
 			plugin_codes.Add("Nintendo - Game Boy", "gb_4345afe1-a2c3-4c58-93d3-373c53a90a92");
+			plugin_codes.Add("Nintendo - Game Boy Advance", "gba_16a78ef5-fba6-4629-b83c-ef47adab5aab");
+			plugin_codes.Add("Nintendo - Game Boy Color", "gbc_9b53fc85-af7c-4ce2-af31-0d95234d783a");
 			plugin_codes.Add("Atari - Jaguar", "jaguar_b9773549-9c20-4729-b23d-f683762ce73a");
 			plugin_codes.Add("Nintendo - Nintendo 64", "n64_a3824d31-c2d3-4a1a-b321-7d0764da5513");
 			plugin_codes.Add("Nintendo - GameCube", "ncube_602422b9-ced5-476e-911a-7fa0adf0f7f7");
@@ -127,6 +129,8 @@ namespace RetroGOG
 			core_codes.Add("Atari - 2600", "stella_libretro.dll");
 			core_codes.Add("Sega - Dreamcast", "flycast_libretro.dll");
 			core_codes.Add("Nintendo - Game Boy", "mgba_libretro.dll");
+			core_codes.Add("Nintendo - Game Boy Advance", "mgba_libretro.dll");
+			core_codes.Add("Nintendo - Game Boy Color", "mgba_libretro.dll");
 			core_codes.Add("Atari - Jaguar", "virtualjaguar_libretro.dll");
 			core_codes.Add("Nintendo - Nintendo 64", "mupen64plus_next_libretro.dll");
 			core_codes.Add("Nintendo - GameCube", "dolphin_libretro.dll");
