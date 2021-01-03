@@ -54,7 +54,7 @@ Forked from Riku55's N64 Integration Plugin: https://github.com/Riku55/galaxy-in
 4. Navigate to *Settings*, click on *Saving*, go to the last option there *Save runtime log (aggregate)* and turn it on.
 
 #### Setting up RetroGOG:
-1. Download the [RetroGOG configuration wizard](RetroGOG.exe).
+1. Download the repository and build RetroGOG.exe from the src folder using Visual Studio.
 2. Run the application and follow the on-screen instructions.
 3. (Re)start Galaxy 2.0 and connect the integration.
 
