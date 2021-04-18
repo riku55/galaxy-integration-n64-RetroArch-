@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy Nintendo Gameboy Color RetroArch plugin",
+    "platform": "ngameboy",
+    "guid": "9b53fc85-af7c-4ce2-af31-0d95234d783a",
+    "version": "0.4",
+    "description": "Galaxy Plugin to add Nintendo GameBoy Color roms and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}

@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy PS1 RetroArch plugin",
+    "platform": "psx",
+    "guid": "ff02c67d-5962-4e79-a3a3-928814edb270",
+    "version": "0.4",
+    "description": "Galaxy Plugin to add PS1 isos and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}

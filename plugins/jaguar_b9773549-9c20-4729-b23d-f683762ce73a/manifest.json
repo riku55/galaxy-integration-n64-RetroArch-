@@ -1,0 +1,11 @@
+{
+    "name": "GOG Galaxy Atari Jaguar RetroArch plugin",
+    "platform": "jaguar",
+    "guid": "b9773549-9c20-4729-b23d-f683762ce73a",
+    "version": "0.4",
+    "description": "Galaxy Plugin to add Atari Jaguar roms and start them with the RetroArch emulator",
+    "author": "jshackles",
+    "email": "jshackles@gmail.com",
+    "url": "https://github.com/jshackles/RetroGOG",
+    "script": "plugin.py"
+}
